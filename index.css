@@ -1,10 +1,17 @@
 /* This is an example CSS file, feel free to remove/edit it anytime */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
 .footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -17,3 +24,333 @@
 .footer span {
   font-size: 14px;
 }
+
+.container{
+  display: flex; 
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(44,41,69);
+}
+
+.card{
+  background-color: #201c28; 
+  color: white; 
+  border-radius: 1rem; 
+  box-shadow: -4px 4px 16px black;
+  width: 100%; 
+  height: 100%; 
+
+  position: relative;
+
+  /* inner grid */
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.user-image-wrapper {
+  position: absolute;
+  width: 20rem; /* Set the width of the wrapper */
+  height: 80%; /* Set the height of the wrapper */
+  left: 25%; 
+  top: 10%;
+ 
+  
+}
+
+#circle{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: .5rem;
+  z-index: 1;
+  position: absolute; 
+  left: -40px;
+  top: -40px; 
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: .8s;
+
+}
+
+
+
+
+#square{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+  background-color: #D6BCFA;
+  margin-right: .5rem;
+  z-index: 1;
+  position: absolute; 
+  right: -2.5rem;
+  bottom: -1.5rem; 
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: .8s;
+
+}
+
+#diamond{
+  height: 3rem;
+  width: 3rem;
+  transform: rotate(45deg);
+  background-color: #D6BCFA;
+  margin-right: .5rem;
+  z-index: 1;
+  position: absolute; 
+  right: -2.3rem;
+  top: 3.5rem; 
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: .8s;
+
+}
+
+#rectangle{
+  height: 2rem;
+  width: 5rem;
+  border-radius: .5rem;
+  background-color: #000;
+  margin-right: .5rem;
+  z-index: 1;
+  position: absolute; 
+  left: -2.5rem;
+  bottom: 30%; 
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ;
+  transition-delay: .8s;
+}
+
+
+.user-image {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  object-fit: cover;
+  transition: clip-path .5s ease-in-out;
+  transform: translateZ(0); /* 3D transform hack for hardware acceleration */
+}
+
+
+
+.user-image:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+.contact-section{
+  grid-column: 1/3; 
+  background-color: #D6BCFA;
+  border-top-left-radius: 1rem; 
+  border-bottom-left-radius:1rem; 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end ;
+  padding-bottom: 5rem;
+  
+  gap: 1.5rem;
+}
+
+.contact-section{
+ color: #000
+}
+.contact-info{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+.contact-label{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  font-size: 1.1rem;
+}
+
+.contact-links,
+.contact-item{
+  padding: 1rem;
+  padding-left: 2rem; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  text-align: center; 
+  letter-spacing: .05rem;
+}
+
+.contact-icon{
+  color: green; 
+  cursor: pointer; 
+  margin-right: .9rem;
+}
+
+.divider{
+  width: 100%; 
+  height: 1rem; 
+  background-color: #000000;
+  display: block;
+}
+
+
+.contact-label{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap:.5rem;
+  margin-bottom: .5rem;
+
+
+
+}
+
+.user-info-section{
+  grid-column: 4/7;
+  padding-left: 6rem;
+  padding-right: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 2rem;
+}
+
+.user-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  
+  font-weight: 500;
+  letter-spacing: .3rem;
+  font-size: 3.5rem;
+}
+
+#first-name{
+  color: #D6BCFA; 
+}
+
+#last-name{
+  color: #fff;
+} 
+
+
+.caption{
+  color: #fff; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  font-weight: 500;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  
+}
+
+
+#divider{
+  height: .3rem;
+  width:  .3rem;
+  background-color: white;
+  margin: 0px .5rem;
+  border-radius: 50%; 
+}
+
+.description{
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  letter-spacing: .05rem;
+  margin-bottom: 1rem;
+}
+
+
+svg{
+  fill: black; 
+  transition: all .2s ease-in-out;
+
+}
+svg:hover{
+  fill: rgba(150, 93, 229, 0.62);
+  transform: scale(1.5)
+}
+
+.lable-icon{
+  fill: black
+}
+
+
+.tech-heading{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.tech-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style-type: none;
+}
+
+.tech-list li{
+  font-size: .8rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: #D6BCFA;
+  color: #000;
+  width: fit-content;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .card{
+    width:100%; 
+    height: 100%; 
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card{
+    width: 91.666667%;
+    height: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card{
+    width: 91.666667%;
+    height: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card{
+    width: 91.666667%;
+    height: 75%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card{
+    width: 66.666667%;
+    height: 66.666667%;
+  }
+} 
+
+
+
