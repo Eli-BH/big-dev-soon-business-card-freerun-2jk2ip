@@ -37,6 +37,7 @@
 
 .card{
   background-color: #201c28; 
+  color: white; 
   border-radius: 1rem; 
   box-shadow: -4px 4px 16px black;
   width: 100%; 
@@ -47,7 +48,7 @@
   /* inner grid */
 
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .user-image-wrapper {
@@ -72,7 +73,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .contact-section{
-  grid-column: 0/1; 
+  grid-column: 1/3; 
   background-color: #D6BCFA;
   border-top-left-radius: 1rem; 
   border-bottom-left-radius:1rem; 
@@ -134,9 +135,66 @@
   margin-bottom: .5rem;
 
 
+
+}
+
+.user-info-section{
+  grid-column: 4/7;
+  padding-left: 6rem;
+  padding-right: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 2rem;
+}
+
+.user-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  
+  font-weight: 500;
+  letter-spacing: .3rem;
+  font-size: 3.5rem;
+}
+
+#first-name{
+  color: #D6BCFA; 
+}
+
+#last-name{
+  color: #fff;
+} 
+
+
+.caption{
+  color: #fff; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  font-weight: 500;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  
 }
 
 
+#divider{
+  height: .3rem;
+  width:  .3rem;
+  background-color: white;
+  margin: 0px .5rem;
+  border-radius: 50%; 
+}
+
+.description{
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  letter-spacing: .05rem;
+  margin-bottom: 1rem;
+}
 
 
 svg{
@@ -153,6 +211,32 @@ svg:hover{
   fill: black
 }
 
+
+.tech-heading{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.tech-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style-type: none;
+}
+
+.tech-list li{
+  font-size: .8rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: #D6BCFA;
+  color: #000;
+  width: fit-content;
+}
 
 
 @media screen and (max-width: 640px) {
